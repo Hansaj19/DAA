@@ -27,6 +27,12 @@ int mChain(vector<int>&arr,int n){
             dp[i][j]=mini;
         }
     }
+    for(int i=0;i<=n;i++){
+        for(int j=0;j<=n;j++){
+            cout<<dp[i][j]<<" ";
+        }
+        cout<<"\n";
+    }
     return dp[1][n-1];
 }
 int main(){
