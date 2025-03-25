@@ -5,8 +5,8 @@ int p=31;
 const int N=1e5+7,m=1e9+7;
 vector<long long> power(N);
 int main(){
-    string t="hnasajana";
-    string s="na";
+    string t="AGCTTAGCTGAGCTAGCTAGCTGAGCTGCTAG";
+    string s="GCTAG";
     int T=t.size(),S=s.size();
     vector<long long> h(T+1,0);
 
@@ -15,11 +15,11 @@ int main(){
         power[i] = (power[i-1]*p)%m;
     }
     for(int i=0;i<T;i++){
-        h[i+1] = (h[i]+(t[i]-'a'+1)*power[i])%m;
+        h[i+1] = (h[i]+(t[i]-'A'+1)*power[i])%m;
     }
     long long h_s=0;
     for(int i=0;i<S;i++){
-        h_s = (h_s+(s[i]-'a'+1)*power[i])%m;
+        h_s = (h_s+(s[i]-'A'+1)*power[i])%m;
     }
     for(int i=0;i+S-1<T;i++){
         long long cur_h = (h[i+S]-h[i]+m)%m;

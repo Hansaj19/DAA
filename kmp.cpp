@@ -55,7 +55,7 @@ void kmp(string s,string p){
     }
 }
 int main(){
-    string s="hansajpansdanstidar";
-    string p="ansdans";
+    string s="AGCTTAGCTGAGCTAGCTAGCTGAGCTGCTAG";
+    string p="GCTAG";
     kmp(s,p);
 }
