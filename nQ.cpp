@@ -1,5 +1,6 @@
 #include<iostream>
 #include <vector>
+
 using namespace std;
 
 bool isSafe(int row, int col, vector<vector<int>>&board,int n){
